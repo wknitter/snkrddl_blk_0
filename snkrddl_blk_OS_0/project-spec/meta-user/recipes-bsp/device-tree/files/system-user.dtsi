@@ -1,0 +1,51 @@
+/include/ "system-conf.dtsi"
+/ {
+	aliases{
+		eth0 = &gem0;
+		eth1 = &gem1;
+	};
+};
+
+&gem0{
+	phy-handle = <&eth0>;
+	phy-mode = "rgmii-id";
+	status = "okay";
+	gmii2rgmii-phy-handle = <&gmii_to_rgmii_0>;
+	ps7_ethernet_0_mdio: mdio{
+		#address-cells = <1>;
+		#size-cells = <0>;
+		eth0: phy@0 {		
+                	device_type="ethernet-phy";
+			phy-mode = "rgmii-id";
+			xlnx,phy-type = <0x5>;
+			reg = <0>;
+		};
+		gmii_to_rgmii_0: gmii_to_rgmii_0@0 {
+			compatible = "xlnx,gmii-to-rgmii-1.0";
+			phy-handle = <&eth0>;
+			reg = <0>;
+		};
+	};
+};
+
+&gem1{
+	phy-handle = <&eth1>;
+	phy-mode = "rgmii-id";
+	status = "okay";
+	gmii2rgmii-phy-handle = <&gmii_to_rgmii_1>;
+	ps7_ethernet_1_mdio: mdio{
+		#address-cells = <1>;
+		#size-cells = <0>;
+		eth1: phy@0 {		
+                	device_type="ethernet-phy";
+			phy-mode = "rgmii-id";
+			xlnx,phy-type = <0x5>;
+			reg = <0>;
+		};
+		gmii_to_rgmii_1: gmii_to_rgmii_1@0 {
+			compatible = "xlnx,gmii-to-rgmii-1.0";
+			phy-handle = <&eth1>;
+			reg = <1>;
+		};
+	};
+};

@@ -1,0 +1,106 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Thu Jan 16 20:58:49 2020
+| Host         : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 18.04.3 LTS
+| Command      : report_control_sets -verbose -file snkrddl_blk_0_wrapper_control_sets_placed.rpt
+| Design       : snkrddl_blk_0_wrapper
+| Device       : xc7z020
+--------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    28 |
+|    Minimum number of control sets                        |    28 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   102 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    28 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |    11 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     6 |
+| >= 14 to < 16      |     3 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             136 |           41 |
+| No           | No                    | Yes                    |              45 |            9 |
+| No           | Yes                   | No                     |              65 |           13 |
+| Yes          | No                    | No                     |              16 |            4 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              68 |           16 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|                                                                Clock Signal                                                                |                                                                           Enable Signal                                                                           |                                                                          Set/Reset Signal                                                                         | Slice Load Count | Bel Load Count |
++--------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   | snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_gmii_to_rgmii_block/snkrddl_blk_0_gmii_to_rgmii_0_0_core/i_gmii_to_rgmii/i_MANAGEMENT/MDIO_INTERFACE_1/SHIFT_REG[15]_i_1_n_0 |                                                                                                                                                                   |                1 |              4 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   | snkrddl_blk_0_i/gmii_to_rgmii_1/U0/snkrddl_blk_0_gmii_to_rgmii_1_0_core/i_gmii_to_rgmii/i_MANAGEMENT/MDIO_INTERFACE_1/SHIFT_REG[15]_i_1_n_0                       |                                                                                                                                                                   |                1 |              4 |
+|  snkrddl_blk_0_i/processing_system7_0/inst/FCLK_CLK3_BUFG                                                                                  |                                                                                                                                                                   | snkrddl_blk_0_i/proc_sys_reset_0/U0/EXT_LPF/lpf_int                                                                                                               |                1 |              4 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   | snkrddl_blk_0_i/gmii_to_rgmii_1/U0/snkrddl_blk_0_gmii_to_rgmii_1_0_core/i_gmii_to_rgmii/i_MANAGEMENT/MDIO_INTERFACE_1/BIT_COUNT                                   |                                                                                                                                                                   |                1 |              4 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   | snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_gmii_to_rgmii_block/snkrddl_blk_0_gmii_to_rgmii_0_0_core/i_gmii_to_rgmii/i_MANAGEMENT/MDIO_INTERFACE_1/BIT_COUNT             |                                                                                                                                                                   |                1 |              4 |
+|  ETH0_CLK125_IBUF_BUFG                                                                                                                     |                                                                                                                                                                   | snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_gmii_to_rgmii_block/snkrddl_blk_0_gmii_to_rgmii_0_0_core/i_gmii_to_rgmii/tx_reset_async_reg_n_0                              |                1 |              5 |
+|  ETH1_CLK125_IBUF_BUFG                                                                                                                     |                                                                                                                                                                   | snkrddl_blk_0_i/gmii_to_rgmii_1/U0/snkrddl_blk_0_gmii_to_rgmii_1_0_core/i_gmii_to_rgmii/tx_reset_async_reg_n_0                                                    |                1 |              5 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   | snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_gmii_to_rgmii_block/snkrddl_blk_0_gmii_to_rgmii_0_0_core/i_gmii_to_rgmii/i_MANAGEMENT/MDIO_INTERFACE_1/ADDR_WR[4]_i_1_n_0    | snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_gmii_to_rgmii_block/snkrddl_blk_0_gmii_to_rgmii_0_0_core/i_gmii_to_rgmii/i_reset_sync_mgmt_reset/reset_out                   |                1 |              5 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   | snkrddl_blk_0_i/gmii_to_rgmii_1/U0/snkrddl_blk_0_gmii_to_rgmii_1_0_core/i_gmii_to_rgmii/i_MANAGEMENT/MDIO_INTERFACE_1/ADDR_WR[4]_i_1_n_0                          | snkrddl_blk_0_i/gmii_to_rgmii_1/U0/snkrddl_blk_0_gmii_to_rgmii_1_0_core/i_gmii_to_rgmii/i_reset_sync_mgmt_reset/reset_out                                         |                1 |              5 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   |                                                                                                                                                                   | snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_gmii_to_rgmii_block/snkrddl_blk_0_gmii_to_rgmii_0_0_core/i_gmii_to_rgmii/i_reset_sync_rx_reset/reset_in                      |                1 |              5 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   |                                                                                                                                                                   | snkrddl_blk_0_i/gmii_to_rgmii_1/U0/snkrddl_blk_0_gmii_to_rgmii_1_0_core/i_gmii_to_rgmii/i_reset_sync_rx_reset/reset_in                                            |                1 |              5 |
+|  snkrddl_blk_0_i/processing_system7_0/inst/FCLK_CLK3_BUFG                                                                                  | snkrddl_blk_0_i/proc_sys_reset_0/U0/SEQ/seq_cnt_en                                                                                                                | snkrddl_blk_0_i/proc_sys_reset_0/U0/SEQ/SEQ_COUNTER/clear                                                                                                         |                1 |              6 |
+|  ETH0_CLK125_IBUF_BUFG                                                                                                                     |                                                                                                                                                                   | snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_gmii_to_rgmii_block/snkrddl_blk_0_gmii_to_rgmii_0_0_core/i_gmii_to_rgmii/i_gmii_to_rgmii/i_reset_sync_tx_reset/reset_out     |                3 |             10 |
+|  ETH1_CLK125_IBUF_BUFG                                                                                                                     |                                                                                                                                                                   | snkrddl_blk_0_i/gmii_to_rgmii_1/U0/snkrddl_blk_0_gmii_to_rgmii_1_0_core/i_gmii_to_rgmii/i_gmii_to_rgmii/i_reset_sync_tx_reset/reset_out                           |                3 |             10 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_1/U0/snkrddl_blk_0_gmii_to_rgmii_1_0_core/i_gmii_to_rgmii/i_gmii_to_rgmii/rgmii_rxc_0                       |                                                                                                                                                                   |                                                                                                                                                                   |                5 |             12 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   | snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_gmii_to_rgmii_block/snkrddl_blk_0_gmii_to_rgmii_0_0_core/i_gmii_to_rgmii/i_MANAGEMENT/MDIO_INTERFACE_1/SHIFT_REG[15]_i_1_n_0 | snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_gmii_to_rgmii_block/snkrddl_blk_0_gmii_to_rgmii_0_0_core/i_gmii_to_rgmii/i_MANAGEMENT/MDIO_INTERFACE_1/SHIFT_REG[14]_i_1_n_0 |                3 |             12 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_gmii_to_rgmii_block/snkrddl_blk_0_gmii_to_rgmii_0_0_core/i_gmii_to_rgmii/i_gmii_to_rgmii/rgmii_rxc_0 |                                                                                                                                                                   |                                                                                                                                                                   |                5 |             12 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   | snkrddl_blk_0_i/gmii_to_rgmii_1/U0/snkrddl_blk_0_gmii_to_rgmii_1_0_core/i_gmii_to_rgmii/i_MANAGEMENT/MDIO_INTERFACE_1/SHIFT_REG[15]_i_1_n_0                       | snkrddl_blk_0_i/gmii_to_rgmii_1/U0/snkrddl_blk_0_gmii_to_rgmii_1_0_core/i_gmii_to_rgmii/i_MANAGEMENT/MDIO_INTERFACE_1/SHIFT_REG[14]_i_1_n_0                       |                2 |             12 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   |                                                                                                                                                                   | snkrddl_blk_0_i/gmii_to_rgmii_1/U0/snkrddl_blk_0_gmii_to_rgmii_1_0_core/i_gmii_to_rgmii/i_reset_sync_mgmt_reset/reset_out                                         |                2 |             13 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   |                                                                                                                                                                   | snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_gmii_to_rgmii_block/snkrddl_blk_0_gmii_to_rgmii_0_0_core/i_gmii_to_rgmii/i_reset_sync_mgmt_reset/reset_out                   |                2 |             13 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   | snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_gmii_to_rgmii_block/snkrddl_blk_0_gmii_to_rgmii_0_0_core/i_gmii_to_rgmii/i_MANAGEMENT/MDC_RISING_REG1                        | snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_gmii_to_rgmii_block/snkrddl_blk_0_gmii_to_rgmii_0_0_core/i_gmii_to_rgmii/i_reset_sync_mgmt_reset/reset_out                   |                4 |             14 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   | snkrddl_blk_0_i/gmii_to_rgmii_1/U0/snkrddl_blk_0_gmii_to_rgmii_1_0_core/i_gmii_to_rgmii/i_MANAGEMENT/MDC_RISING_REG1                                              | snkrddl_blk_0_i/gmii_to_rgmii_1/U0/snkrddl_blk_0_gmii_to_rgmii_1_0_core/i_gmii_to_rgmii/i_reset_sync_mgmt_reset/reset_out                                         |                4 |             14 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   |                                                                                                                                                                   | snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_resets/idelayctrl_reset_gen/reset_out                                                        |                2 |             15 |
+|  snkrddl_blk_0_i/processing_system7_0/inst/FCLK_CLK3_BUFG                                                                                  |                                                                                                                                                                   |                                                                                                                                                                   |                4 |             24 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   |                                                                                                                                                                   | snkrddl_blk_0_i/proc_sys_reset_0/U0/peripheral_reset[0]                                                                                                           |                5 |             25 |
+|  ETH1_CLK125_IBUF_BUFG                                                                                                                     |                                                                                                                                                                   |                                                                                                                                                                   |                6 |             25 |
+|  ETH0_CLK125_IBUF_BUFG                                                                                                                     |                                                                                                                                                                   |                                                                                                                                                                   |                6 |             25 |
+|  snkrddl_blk_0_i/gmii_to_rgmii_0/U0/i_snkrddl_blk_0_gmii_to_rgmii_0_0_clocking/clkin_out                                                   |                                                                                                                                                                   |                                                                                                                                                                   |               16 |             39 |
++--------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

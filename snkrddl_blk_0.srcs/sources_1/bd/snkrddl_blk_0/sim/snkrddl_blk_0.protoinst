@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"snkrddl_blk_0": {
+			"proto_instances": {
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.820588",
+   "Default View_TopLeft":"-184,0",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 3 -x 830 -y 160 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 830 -y 180 -defaultsOSRD
+preplace port ETH0_MDIO -pg 1 -lvl 3 -x 830 -y 250 -defaultsOSRD
+preplace port ETH0_RGMII -pg 1 -lvl 3 -x 830 -y 270 -defaultsOSRD
+preplace port ETH1_MDIO -pg 1 -lvl 3 -x 830 -y 490 -defaultsOSRD
+preplace port ETH1_RGMII -pg 1 -lvl 3 -x 830 -y 510 -defaultsOSRD
+preplace port ETH0_CLK125 -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
+preplace port ETH1_CLK125 -pg 1 -lvl 0 -x 0 -y 660 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 250 -y 220 -defaultsOSRD
+preplace inst gmii_to_rgmii_0 -pg 1 -lvl 2 -x 670 -y 320 -defaultsOSRD
+preplace inst gmii_to_rgmii_1 -pg 1 -lvl 2 -x 670 -y 540 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 250 -y 560 -defaultsOSRD
+preplace netloc gmii_clk_0_1 1 0 2 NJ 440 510J
+preplace netloc processing_system7_0_FCLK_CLK3 1 0 2 20 450 480
+preplace netloc gmii_to_rgmii_0_ref_clk_out 1 1 2 530 190 810
+preplace netloc gmii_clk_1_1 1 0 2 NJ 660 500J
+preplace netloc processing_system7_0_FCLK_RESET3_N 1 0 2 20 670 470
+preplace netloc proc_sys_reset_0_peripheral_reset 1 1 1 520 310n
+preplace netloc gmii_to_rgmii_1_MDIO_PHY 1 2 1 NJ 490
+preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 180 NJ
+preplace netloc processing_system7_0_DDR 1 1 2 NJ 160 NJ
+preplace netloc processing_system7_0_MDIO_ETHERNET_1 1 1 1 490 120n
+preplace netloc gmii_to_rgmii_0_RGMII 1 2 1 NJ 270
+preplace netloc gmii_to_rgmii_0_MDIO_PHY 1 2 1 NJ 250
+preplace netloc processing_system7_0_GMII_ETHERNET_1 1 1 1 500 100n
+preplace netloc processing_system7_0_MDIO_ETHERNET_0 1 1 1 510 80n
+preplace netloc processing_system7_0_GMII_ETHERNET_0 1 1 1 520 60n
+preplace netloc gmii_to_rgmii_1_RGMII 1 2 1 NJ 510
+levelinfo -pg 1 0 250 670 830
+pagesize -pg 1 -db -bbox -sgen -150 0 970 680
+"
+}
+{
+   "da_clkrst_cnt":"1",
+   "da_ps7_cnt":"1"
+}
